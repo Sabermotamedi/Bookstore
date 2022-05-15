@@ -1,14 +1,34 @@
+using Bookstore.Server;
+using Bookstore.Server.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
+
+var seed = args.Contains("/seed");
+if (seed)
+{
+    args = args.Except(new[] { "/seed" }).ToArray();
+}
 
 var builder = WebApplication.CreateBuilder(args);
 
 var assembly = typeof(Program).Assembly.GetName().Name;
 var defaultConnString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+if (seed)
+{
+    SeedData.EnsureSeedData(defaultConnString);
+}
 
+builder.Services.AddDbContext<AspNetIdentityDbContext>(options =>
+    options.UseSqlServer(defaultConnString,
+        b => b.MigrationsAssembly(assembly)));
 
-builder.Services.AddIdentityServer()    
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AspNetIdentityDbContext>();
+
+builder.Services.AddIdentityServer()
+    .AddAspNetIdentity<IdentityUser>()
     .AddConfigurationStore(options =>
     {
         options.ConfigureDbContext = b =>
@@ -29,6 +49,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseStaticFiles();
+app.UseRouting();
+
 app.UseIdentityServer();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -40,7 +63,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-app.MapControllers();
+app.UseEndpoints(endpoints => { 
+    endpoints.MapDefaultControllerRoute(); 
+});
+//app.MapControllers();
 
 app.Run();
