@@ -1,3 +1,4 @@
+using Bookstore.API.Services;
 using Bookstore.DAL;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IBookService,BookService>();
 
 var app = builder.Build();
 

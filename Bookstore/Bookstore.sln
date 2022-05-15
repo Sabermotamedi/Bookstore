@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.API", "src\Bookst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.DAL", "src\Bookstore.DAL\Bookstore.DAL.csproj", "{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.Server", "src\Bookstore.Server\Bookstore.Server.csproj", "{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
