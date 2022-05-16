@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.API", "src\Bookstore.API\Bookstore.API.csproj", "{F2B1AEBD-C513-4E47-844B-71C1867E524F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookstore.API", "src\Bookstore.API\Bookstore.API.csproj", "{F2B1AEBD-C513-4E47-844B-71C1867E524F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.DAL", "src\Bookstore.DAL\Bookstore.DAL.csproj", "{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookstore.DAL", "src\Bookstore.DAL\Bookstore.DAL.csproj", "{BA02C98B-1AC5-47EB-BDBC-BDE0749BE66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookstore.Server", "src\Bookstore.Server\Bookstore.Server.csproj", "{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookstore.Server", "src\Bookstore.Server\Bookstore.Server.csproj", "{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookstore.Client", "src\Bookstore.Client\Bookstore.Client.csproj", "{61757BE4-A027-4FAC-912F-E7C549BCD2BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB5DB6C-7833-44DC-85EE-22AFD12E3656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61757BE4-A027-4FAC-912F-E7C549BCD2BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61757BE4-A027-4FAC-912F-E7C549BCD2BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61757BE4-A027-4FAC-912F-E7C549BCD2BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61757BE4-A027-4FAC-912F-E7C549BCD2BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

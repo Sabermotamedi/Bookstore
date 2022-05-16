@@ -1,0 +1,31 @@
+﻿@page "/bookstores"
+
+<h3>Bookstore</h3>
+
+<div class="row">
+    @if (Books.Any())
+    {
+        @foreach (var book in Books)
+        {
+            <div class="col-6 col-sm-12 col-md-6 col-lg-4 col-xl-4 mh-25 mb-4">
+                <div class="card shadow-sm rounded">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>@book.BookName</b></h5>
+                        <p class="card-text">@book.Auther</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <span>Publisher: @book.Publisher</span>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No books available</p>
+    }
+</div>
+
+@code {
+
+}

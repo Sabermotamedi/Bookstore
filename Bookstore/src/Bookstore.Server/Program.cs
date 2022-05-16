@@ -62,10 +62,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-app.UseEndpoints(endpoints => { 
-    endpoints.MapDefaultControllerRoute(); 
-});
+//app.UseAuthorization();
+//app.UseEndpoints(endpoints => { 
+//    endpoints.MapDefaultControllerRoute(); 
+//});
 //app.MapControllers();
 
 app.Run();
